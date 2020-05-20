@@ -1,10 +1,9 @@
-.PHONY: test upload clean bootstrap env
+.PHONY: test upload clean bootstrap venv lint dev build
 
 TEST_PATH := ./
 
-lint:
-	black .
-	flake8
+format:
+	@black .
 
 test:
 	@python3 -m pytest --verbose $(TEST_PATH)
@@ -13,9 +12,9 @@ venv:
 	@virtualenv venv
 
 clean:
-	@rm --force --recursive build/
-	@rm --force --recursive dist/
-	@rm --force --recursive *.egg-info
+	@rm -rf build/
+	@rm -rf dist/
+	@rm -Rf *.egg-info 
 
 bootstrap:
 	venv/bin/pip3 install -e .

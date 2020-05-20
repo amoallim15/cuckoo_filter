@@ -5,7 +5,7 @@ This repository is an implementation of [Cuckoo Filter: Practically Better Than 
 ## Installation
 You can install the package by issuing the following command:
 
-	pip install cuckoo_filter
+	pip install cuckoo-filter
 
 ## Contributors
 [Ali Moallim](mailto:axj.159@gmail.com)
