@@ -3,11 +3,12 @@ import os
 from setuptools import find_packages, setup
 
 _locals = {}
-exec(open("cuckoo_filter/_version.py").read(), None, _locals)
+root_dir = os.path.dirname(os.path.abspath(__file__))
+exec(open(os.path.join(root_dir, "cuckoo_filter", "_version.py")).read(), None, _locals)
 version = _locals["__version__"]
-install_requires = open("requirements.txt").read().strip().split("\n")
-dev_requires = open("requirements.dev.txt").read().strip("\n")
-long_description = open("README.md").read()
+install_requires = open(os.path.join(root_dir, "requirements.txt")).read().strip().split("\n")
+dev_requires = open(os.path.join(root_dir, "requirements.dev.txt")).read().strip("\n")
+long_description = open(os.path.join(root_dir, "README.md")).read()
 
 setup(
     name="cuckoo_filter",
@@ -18,6 +19,7 @@ setup(
     description="Cuckoo Filter: Practically Better Than Bloom",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    packages=find_packages(),
     url="https://github.com/amoallim15/Cuckoo-Filter",
     license="MIT License",
     author="Ali Moallim",
