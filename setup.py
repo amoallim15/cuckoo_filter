@@ -21,7 +21,7 @@ setup(
     long_description_content_type="text/markdown",
     packages=find_packages(),
     url="https://github.com/amoallim15/Cuckoo-Filter",
-    license="MIT License",
+    license="GPLv3 License",
     author="Ali Moallim",
     author_email="amoallim15@gmail.com",
     classifiers=[
