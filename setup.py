@@ -6,7 +6,9 @@ _locals = {}
 root_dir = os.path.dirname(os.path.abspath(__file__))
 exec(open(os.path.join(root_dir, "cuckoo_filter", "_version.py")).read(), None, _locals)
 version = _locals["__version__"]
-install_requires = open(os.path.join(root_dir, "requirements.txt")).read().strip().split("\n")
+install_requires = (
+    open(os.path.join(root_dir, "requirements.txt")).read().strip().split("\n")
+)
 dev_requires = open(os.path.join(root_dir, "requirements.dev.txt")).read().strip("\n")
 long_description = open(os.path.join(root_dir, "README.md")).read()
 
@@ -27,7 +29,7 @@ setup(
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
-        "License :: OSI Approved ::GPLv3 License",
+        "License :: OSI Approved ::GNU General Public License (GPLv3)",
         "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",

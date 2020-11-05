@@ -1,6 +1,9 @@
-.PHONY: test upload clean bootstrap venv lint dev build
-
+.PHONY: test upload clean bootstrap venv lint dev build help
+DEAFULT_GOAL = help
 TEST_PATH := ./
+
+help:
+	@echo "TODO: help info."
 
 format:
 	@black .
